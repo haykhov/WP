@@ -1,0 +1,277 @@
+.pwr-hidden {
+  display: none;
+}
+
+.pwr-highlight {
+  font-weight: bold;
+}
+
+.pwr-label {
+  display: block;
+  padding: 8px 0 8px 8px;
+  color: var(--travel-search-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: .875rem;
+}
+
+#pwr-travel-search-container {
+  max-width: 60%;
+}
+
+#pwr-travel-search-form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pwr-travel-field {
+  margin: 0.5rem auto;
+}
+
+.pwr-travel-field input,
+.pwr-travel-field select {
+  padding: 10px;
+  border: 1px solid var(--travel-search-color);
+  border-radius: 5px;
+  width: 84%;
+}
+
+.pwr-travel-field span.select2 {
+  border: 1px solid var(--travel-search-color);
+  border-radius: 5px;
+  width: 97.5% !important;
+}
+
+#pwr-travel-search-submit {
+  line-height: .9rem;
+  font-weight: 700;
+  background: var(--travel-search-color);
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: 1px var(--travel-search-color) solid;
+  border-radius: 5px;
+}
+
+#pwr-travel-search-submit:hover {
+  border-color: var(--travel-search-color);
+  color: var(--travel-search-color) !important;
+  background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  #pwr-travel-search-form {
+    flex-direction: column;
+  }
+
+  .pwr-travel-field {
+    width: 110%;
+    flex-basis: auto;
+  }
+
+  #pwr-travel-search-submit {
+    width: 90%;
+  }
+  .pwr-travel-field span.select2 {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pwr-travel-field {
+    flex-basis: calc(50% - 15px);
+  }
+
+  #pwr-travel-search-submit {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pwr-travel-field {
+    flex-basis: calc(20% - 15px);
+  }
+
+  #pwr-travel-search-submit {
+    flex-basis: auto;
+  }
+}
+
+/******************************/
+/* Select 2 *******************/
+/******************************/
+#pwr-travel-search-form .select2-container--default .select2-selection--multiple .select2-selection--choice {
+  background-color: #e4e4e4;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+#pwr-travel-search-form .select2-container--default .select2-selection--multiple .select2-selection--choice--remove {
+  color: #999999;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+#pwr-travel-search-form .select2-container--default .select2-dropdown .select2-search--dropdown .select2-search--field {
+  min-height: 26px;
+}
+
+#pwr-travel-search-form .select2-container--default .select2-dropdown {
+  min-height: 200px;
+}
+/* Select2 container with fixed width */
+.select2-container--default .select2-selection--multiple {
+  width: 174px;
+  height: 36px;
+  border: none
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  padding: 4px;
+  overflow: hidden;
+}
+
+/* Style for the selected items */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin-top: 0;
+  margin-right: 0;
+  float: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Hide all selected choices except the first one */
+.select2-container--default .select2-selection--multiple .select2-selection__choice:not(:first-child) {
+  display: none;
+}
+
+/* Show ellipsis when there are multiple selections */
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/******************************/
+/* Calendar date range picker */
+/******************************/
+#pwr-travel-search-form .daterangepicker .calendar-table {
+  margin-bottom: 20px;
+}
+
+#pwr-travel-search-form .daterangepicker .drp-calendar {
+  color: #000000;
+}
+
+#pwr-travel-search-form .daterangepicker input, .daterangepicker select, .daterangepicker .select2-container--default .select2-selection--single {
+  height: auto;
+  padding: 5px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.daterangepicker td.in-range {
+  background-color: #var(--travel-search-hover-color) !important;
+}
+
+.daterangepicker td.start-date,
+.daterangepicker td.end-date {
+  background-color: var(--travel-search-color) !important;
+}
+
+/******************************/
+/* Travelers ******************/
+/******************************/
+#pwr-travelers-modal {
+  position: absolute;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 100;
+  width: 300px;
+  overflow: auto;
+  display: none;
+}
+
+.pwr-travelers-section {
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pwr-travelers-section .pwr-decrease,
+.pwr-travelers-section .pwr-increase {
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.pwr-travelers-section input[type="number"] {
+  width: 59%;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.pwr-child-age {
+  width: calc(100% - 10px);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/******************************/
+/* Destination*****************/
+/******************************/
+#pwr-autocomplete-modal {
+  position: absolute;
+  background: white;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  z-index: 100;
+  min-width: 50%;
+}
+
+.pwr-autocomplete-section {
+  margin-bottom: 15px;
+}
+
+.pwr-autocomplete-section-title {
+  padding: 0.25rem 1rem 0.55rem 0.4rem;
+  font-size: 0.95rem;
+  letter-spacing: .0625rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+}
+
+.pwr-autocomplete-item {
+  cursor: pointer;
+  min-width: 350px;
+  font-size: .85rem;
+  padding: 0.25rem 1.5rem;
+  font-family: 'Poppins', Helvetica, Arial, Verdana, sans-serif;
+  font-weight: normal;
+}
+
+.pwr-autocomplete-item:hover {
+  background-color: #eeeeee;
+}
